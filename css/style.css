@@ -1,0 +1,166 @@
+/* :::::::::::::::::::::::::::::
+          Base style
+    ::::::::::::::::::::::::::::*/
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color:#4a4a4a;
+}
+header, footer {
+    width:100%;
+    background-color:#fafafa;
+    padding-bottom:1rem;
+}
+a { 
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container,
+nav ul{
+    display: flex;
+   
+}
+h2 {
+    font-size: 1rem;
+}
+ul {
+    padding:0;
+}
+/* :::::::::::::::::::::::::::::
+         pattern Layout
+    ::::::::::::::::::::::::::::*/
+.column {
+    flex-direction: column;
+}
+.center {
+    align-items: center;
+    justify-content: center;
+}
+.stiky {
+    margin-top:auto;
+}
+
+/* :::::::::::::::::::::::::::::
+         Header Layout
+    ::::::::::::::::::::::::::::*/
+
+.primary {
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-nav  ul{
+    flex-direction: column;
+    align-items: center;
+}
+.main-nav li {
+    width: 90%;
+    text-align: center;
+    font-weight: 700;
+    color:#4a4a4a;
+    background-color:#fff;
+    padding:10px;
+    margin:5px;
+    font-size: 1.4rem;
+}
+.main-nav li:first-child{
+    background-color: inherit;
+    font-size: 2rem;
+}
+
+.main-nav a {
+    color: #4a4a4a;
+    font-size: 1.5rem;
+}
+.item {
+    width: 85%;
+    padding:.6rem
+}
+header .item:nth-child(2){
+   color:#707070;
+}
+.avatar {
+    width:60%;
+    height: auto;;
+}
+
+/* :::::::::::::::::::::::::::::
+         Portfolio Section Layout
+    ::::::::::::::::::::::::::::*/
+section {
+    padding: .5rem 0;
+    margin:.5rem 0;
+}
+figure {
+    margin: .75rem 1.5rem;
+
+}
+
+figure img {
+    width:100%;
+}
+
+/* :::::::::::::::::::::::::::::
+         Footer  Layout
+    ::::::::::::::::::::::::::::*/
+footer {
+    padding: 0;;
+    padding-top:2rem;
+}
+footer span{
+    font-weight: 500;
+}
+footer a {
+    color: #4a4a4a;
+}
+/* :::::::::::::::::::::::::::::
+         Footer  Nav
+    ::::::::::::::::::::::::::::*/
+.bottom-nav {
+    border-top: 1px solid #a79c9c;
+}
+.bottom-nav ul {
+    justify-self: flex-end;
+    
+}
+.bottom-nav li{
+     display: none;
+     text-align: right;
+     flex:1;
+     font-weight: 500;
+}
+.bottom-nav li:first-child, .bottom-nav li:last-child {
+    display:inline;
+}
+ .bottom-nav li:first-child {
+    margin-right: auto;
+    text-align: left;
+} 
+footer .item:last-child {
+    padding: 0;
+}
+
+/* :::::::::::::::::::::::::::::
+         Dispaly none  
+    ::::::::::::::::::::::::::::*/
+
+.hidden {
+    display:none;
+}
+
+/* :::::::::::::::::::::::::::::
+         Media Queris  
+    ::::::::::::::::::::::::::::*/
+
+    @media screen and (min-width:768px){
+        
+    }
+
+

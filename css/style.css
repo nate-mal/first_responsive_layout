@@ -13,14 +13,15 @@ body {
 }
 header, footer {
     width:100%;
-    background-color:#fafafa;
+    background-color: #E5d8cc;
     padding-bottom:1rem;
 }
 a { 
     text-decoration: none;
 }
-a:hover{
-   color:grey;
+a:hover, nav a:hover {
+   color:orange;
+   text-shadow: 0.5px 0.5px  #4a4a4a;
 }
 li {
     list-style: none;
@@ -36,7 +37,7 @@ h2 {
 section > h2, footer  h2 {
     font-size: 2rem;
 }
-section {
+section{
     border-radius: .6rem;
 }
 ul {
@@ -95,9 +96,7 @@ nav li {
     color: #4a4a4a;
     font-size: 1.5rem;
 }
-.main-nav a:hover{
-    color:gray;
-}
+
 .item {
     width: 95%;
     padding:.6rem
@@ -107,7 +106,8 @@ header .item:nth-child(2){
 }
 .avatar {
     width:60%;
-    height: auto;;
+    height: auto;
+    border-radius: 1rem;
 }
 
 /* :::::::::::::::::::::::::::::
@@ -235,17 +235,19 @@ footer .item:last-child {
                 justify-content: space-around;
        }
        section .container .item {
-           flex:1 calc(50% - 3rem); 
+           flex:1 calc(50% - 4rem); 
        }
        /* ::::::: Skills Sections:::::::: */
-       .skills .container .item:last-child {
+
+
+        .skills .container .item {
+            max-width: 500px;
+        }
+        .skills .container .item:last-child {
            order:-1;
            flex: 1 100%;
        }
-       .skills .container .item img {
-           max-height: 50vh;
-           width:auto;
-       }
+       
        
 
       /* :::::::Footer Section:::::::: */
@@ -289,6 +291,12 @@ footer .item:last-child {
     /* :::::::Portfolio Section:::::::: */
     section .container .item {
         flex:1 calc(33% - 4.5rem);
+    }
+    .skills .container .item {
+        flex: 1;
+    }
+    .skills .container .item:first-child {
+              order:-2;
     }
     }
 

@@ -225,9 +225,14 @@ footer .item:last-child {
     }
 
     @media screen and (min-width: 1024px) {
+        /* :::::::Wider Screen Section:::::::: */
+       main, header div:last-child{
+            max-width: 1400px;
+            margin:auto;
+        }
 
         /* :::::::Header Section:::::::: */
-       
+     
    .main-nav ul{
     justify-content: flex-end;
    }

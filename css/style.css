@@ -19,6 +19,9 @@ header, footer {
 a { 
     text-decoration: none;
 }
+a:hover{
+   color:grey;
+}
 li {
     list-style: none;
 }
@@ -29,6 +32,12 @@ nav ul{
 }
 h2 {
     font-size: 1rem;
+}
+section > h2, footer  h2 {
+    font-size: 2rem;
+}
+section {
+    border-radius: .6rem;
 }
 ul {
     padding:0;
@@ -86,6 +95,9 @@ nav li {
     color: #4a4a4a;
     font-size: 1.5rem;
 }
+.main-nav a:hover{
+    color:gray;
+}
 .item {
     width: 95%;
     padding:.6rem
@@ -99,7 +111,7 @@ header .item:nth-child(2){
 }
 
 /* :::::::::::::::::::::::::::::
-         Portfolio Section Layout
+         Section Layout
     ::::::::::::::::::::::::::::*/
 
 figure {
@@ -110,6 +122,19 @@ figure {
 figure img {
     width:100%;
 }
+/* :::::::::::::::::::::::::::::
+         Skills Section Layout
+    ::::::::::::::::::::::::::::*/
+    .skills {
+        background-color: #F9ebcb;
+    }
+
+/* :::::::::::::::::::::::::::::
+         Portfolio Section Layout
+    ::::::::::::::::::::::::::::*/
+    .portfolio {
+        background-color: #F9c6b2;
+    }
 
 /* :::::::::::::::::::::::::::::
          Footer  Layout
@@ -118,7 +143,7 @@ footer {
     padding: 0;;
     padding-top:2rem;
 }
-footer .item:last-child {
+footer .item{
     margin-top:2rem;
 }
 footer span{
@@ -170,6 +195,18 @@ footer .item:last-child {
     @media screen and (min-width:768px){
         
         /* :::::::Header:::::::: */
+        header .container {
+            flex-direction: row-reverse;
+            justify-content: space-around;
+  
+        }
+        header .item {
+            flex: 1;
+        }
+        header .item:last-child{
+            flex: 2;
+        }
+         /* :::::::MAIN-NAV:::::::: */
       .main-nav ul {
           flex-direction:row;
           flex-wrap:wrap;
@@ -180,6 +217,7 @@ footer .item:last-child {
       }
       .main-nav li:first-child {
            flex:1 100%;
+           font-family: 'Arvo', serif;
       }
       .main-nav li:nth-child(2){
           margin-left: auto;
@@ -188,27 +226,27 @@ footer .item:last-child {
           margin-right: auto;
       }
 
-      header .container {
-          flex-direction: row-reverse;
-          justify-content: space-around;
+      
+       /* ::::::: Sections:::::::: */
 
-      }
-      header .item {
-          flex: 1;
-      }
-      header .item:last-child{
-          flex: 2;
-      }
-       /* :::::::Portfolio Section:::::::: */
-
-       .portfolio .container {
+       section .container {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
        }
-       .portfolio .container .item {
-           flex:1 calc(50% - 3rem);
+       section .container .item {
+           flex:1 calc(50% - 3rem); 
        }
+       /* ::::::: Skills Sections:::::::: */
+       .skills .container .item:last-child {
+           order:-1;
+           flex: 1 100%;
+       }
+       .skills .container .item img {
+           max-height: 50vh;
+           width:auto;
+       }
+       
 
       /* :::::::Footer Section:::::::: */
          .bottom-nav li {
@@ -220,6 +258,7 @@ footer .item:last-child {
          }
          .bottom-nav li:first-child {
              flex:1;
+             font-family: 'Arvo', serif;
          }
 
     }
@@ -232,7 +271,10 @@ footer .item:last-child {
         }
 
         /* :::::::Header Section:::::::: */
-     
+     /* :::::::MAIN-NAV:::::::: */
+     .fixed{
+         position:fixed;
+     }
    .main-nav ul{
     justify-content: flex-end;
    }
@@ -245,7 +287,7 @@ footer .item:last-child {
     text-align: left;
 }
     /* :::::::Portfolio Section:::::::: */
-    .portfolio .container .item {
+    section .container .item {
         flex:1 calc(33% - 4.5rem);
     }
     }

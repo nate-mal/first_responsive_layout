@@ -37,6 +37,10 @@ section {
     padding: .5rem 0;
     margin:.5rem 0;
 }
+nav li {
+    padding:10px;
+    margin:5px;
+}
 /* :::::::::::::::::::::::::::::
          pattern Layout
     ::::::::::::::::::::::::::::*/
@@ -71,8 +75,6 @@ section {
     font-weight: 700;
     color:#4a4a4a;
     background-color:#fff;
-    padding:10px;
-    margin:5px;
     font-size: 1.4rem;
 }
 .main-nav li:first-child{
@@ -85,7 +87,7 @@ section {
     font-size: 1.5rem;
 }
 .item {
-    width: 85%;
+    width: 95%;
     padding:.6rem
 }
 header .item:nth-child(2){
@@ -116,6 +118,9 @@ footer {
     padding: 0;;
     padding-top:2rem;
 }
+footer .item:last-child {
+    margin-top:2rem;
+}
 footer span{
     font-weight: 500;
 }
@@ -129,7 +134,7 @@ footer a {
     border-top: 1px solid #a79c9c;
 }
 .bottom-nav ul {
-    justify-content: flex-end;
+    justify-content: space-between;
     
 }
 .bottom-nav li{
@@ -144,7 +149,14 @@ footer a {
  .bottom-nav li:first-child {
     margin-right: auto;
     text-align: left;
+    padding-left:0;
+    margin-left:0;
 } 
+.bottom-nav li:last-child, .bottom-nav li:nth-last-child(2) {
+    padding-right:0;
+    margin-right:0;
+} 
+
 footer .item:last-child {
     padding: 0;
 }
@@ -162,12 +174,18 @@ footer .item:last-child {
           flex-direction:row;
           flex-wrap:wrap;
       }
-      .main-nav li {
-          flex:1;
+      .main-nav li{
+          flex:0;
           background-color: inherit;
       }
       .main-nav li:first-child {
            flex:1 100%;
+      }
+      .main-nav li:nth-child(2){
+          margin-left: auto;
+      }
+      .main-nav li:last-child {
+          margin-right: auto;
       }
 
       header .container {
@@ -195,27 +213,32 @@ footer .item:last-child {
       /* :::::::Footer Section:::::::: */
          .bottom-nav li {
              display: block;
+             flex:0;
          }
          .bottom-nav li:last-child {
              display: none;
+         }
+         .bottom-nav li:first-child {
+             flex:1;
          }
 
     }
 
     @media screen and (min-width: 1024px) {
+
         /* :::::::Header Section:::::::: */
-       .main-nav ul {
-        justify-content: flex-end;
-       }
-       .main-nav li{
-           
-           margin:0;
-           padding:0;
-       }
-       .main-nav li:first-child {
-        flex:1;
-        margin-right: auto;
+       
+   .main-nav ul{
+    justify-content: flex-end;
    }
+   .main-nav li{
+       flex:0;
+   }
+   .main-nav li:first-child{
+    flex:1;
+    margin-right: auto;
+    text-align: left;
+}
     /* :::::::Portfolio Section:::::::: */
     .portfolio .container .item {
         flex:1 calc(33% - 4.5rem);

@@ -58,7 +58,6 @@ nav li {
     flex-direction: column;
 }
 .center {
-    align-items: center;
     justify-content: center;
 }
 .stiky {
@@ -268,7 +267,7 @@ footer .item:last-child {
     @media screen and (min-width: 1024px) {
         /* :::::::Wider Screen Section:::::::: */
        main, header div:last-child{
-            max-width: 1400px;
+            max-width: 1200px;
             margin:auto;
         }
 

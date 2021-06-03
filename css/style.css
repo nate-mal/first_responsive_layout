@@ -59,6 +59,7 @@ nav li {
 }
 .center {
     justify-content: center;
+    align-items: center;
 }
 .stiky {
     margin-top:auto;
@@ -192,7 +193,7 @@ footer .item:last-child {
     ::::::::::::::::::::::::::::*/
 
     @media screen and (min-width:768px){
-        
+       
         /* :::::::Header:::::::: */
         header .container {
             flex-direction: row-reverse;
@@ -224,6 +225,9 @@ footer .item:last-child {
       .main-nav li:last-child {
           margin-right: auto;
       }
+      header article p {
+          padding: 4rem;
+      }
 
       
        /* ::::::: Sections:::::::: */
@@ -236,6 +240,11 @@ footer .item:last-child {
        section .container .item {
            flex:1 calc(50% - 4rem); 
        }
+
+        /* ::::::: Portfolio Sections:::::::: */
+        .portfolio {
+            align-items: flex-start;
+        }
        /* ::::::: Skills Sections:::::::: */
 
 
